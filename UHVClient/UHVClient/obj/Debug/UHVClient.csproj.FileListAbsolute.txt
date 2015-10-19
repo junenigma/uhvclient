@@ -1,0 +1,15 @@
+D:\cc\UHVClient\UHVClient\UHVClient\bin\Debug\UHVClient.exe.config
+D:\cc\UHVClient\UHVClient\UHVClient\bin\Debug\UHVClient.exe
+D:\cc\UHVClient\UHVClient\UHVClient\bin\Debug\UHVClient.pdb
+D:\cc\UHVClient\UHVClient\UHVClient\obj\Debug\UHVClient.Properties.Resources.resources
+D:\cc\UHVClient\UHVClient\UHVClient\obj\Debug\UHVClient.csproj.GenerateResource.Cache
+D:\cc\UHVClient\UHVClient\UHVClient\obj\Debug\UHVClient.exe
+D:\cc\UHVClient\UHVClient\UHVClient\obj\Debug\UHVClient.pdb
+D:\cc\UHVClient\UHVClient\UHVClient\bin\Debug\DotNetSkin.dll
+D:\cc\UHVClient\UHVClient\UHVClient\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\cc\UHVClient\UHVClient\UHVClient\bin\Debug\UtilityLibrary.dll
+D:\cc\UHVClient\UHVClient\UHVClient\obj\Debug\UHVClient.MainMenu.resources
+D:\cc\UHVClient\UHVClient\UHVClient\obj\Debug\UHVClient.GetUDiskInfo.resources
+D:\cc\UHVClient\UHVClient\UHVClient\obj\Debug\UHVClient.csprojResolveAssemblyReference.cache
+D:\cc\UHVClient\UHVClient\UHVClient\bin\Debug\System.Data.SQLite.dll
+D:\cc\UHVClient\UHVClient\UHVClient\obj\Debug\UHVClient.GetDataInfo.resources
