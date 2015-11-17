@@ -37,6 +37,7 @@ namespace UHVClient
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GetUDiskInfo));
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
@@ -55,12 +56,13 @@ namespace UHVClient
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(673, 261);
+            this.ClientSize = new System.Drawing.Size(584, 441);
             this.Controls.Add(this.listBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GetUDiskInfo";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "选择U盘";
+            this.Text = "选择安全U盘";
             this.Load += new System.EventHandler(this.GetUDiskInfo_Load);
             this.ResumeLayout(false);
 

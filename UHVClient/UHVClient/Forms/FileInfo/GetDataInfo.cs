@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
+//using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using System.Data.SQLite;
 
 namespace UHVClient
 {
@@ -47,7 +48,30 @@ namespace UHVClient
                     {
                         if ((file.FullName.Substring(file.FullName.LastIndexOf(".")) == ".db"))
                         {
-                            this.label1.Text = file.Name;
+                            Config.DatabaseFile = file.FullName;
+                            this.statusStrip1.Text = Config.DataSource;
+                            try
+                            {
+                                using (SQLiteConnection conn = new SQLiteConnection(Config.DataSource))
+                                {
+                                    using (SQLiteCommand cmd = new SQLiteCommand())
+                                    {
+                                        conn.Open();
+                                        cmd.Connection = conn;
+
+                                        SQLiteHelper sh = new SQLiteHelper(cmd);
+
+                                        DataTable dt = sh.GetTableList();
+                                        dataGridView1.DataSource = dt;
+
+                                        conn.Close();
+                                    }
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.ToString());
+                            }
                         }
                     }
                     //else

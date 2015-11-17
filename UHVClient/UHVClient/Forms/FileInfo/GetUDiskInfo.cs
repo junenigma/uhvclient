@@ -9,6 +9,8 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.IO;
 using System.Threading;
+using System.Security.AccessControl;
+using System.Text.RegularExpressions;
 
 namespace UHVClient
 {
@@ -25,9 +27,12 @@ namespace UHVClient
             var drv = System.IO.DriveInfo.GetDrives();
             foreach (var item in drv)
             {
-                if ((item.DriveType == DriveType.Removable || item.DriveType == DriveType.Fixed) && "交换区" == item.VolumeLabel)
+                if (item.IsReady)
                 {
-                    listBox1.Items.Add(item.ToString());
+                    if ((item.DriveType == DriveType.Removable || item.DriveType == DriveType.Fixed) && "交换区" == item.VolumeLabel)
+                    {
+                        listBox1.Items.Add(item.ToString());
+                    }
                 }
             }
         }
@@ -39,10 +44,12 @@ namespace UHVClient
             {
                 MainMenu frm1 = (MainMenu)this.Owner;
                 frm1.DiskSign = listBox1.Items[index].ToString();
-                GetDataInfo di = new GetDataInfo();
-                di.MdiParent = frm1;
+
+                //GetDataInfo di = new GetDataInfo();
+                //di.MdiParent = frm1;
                 //di.WindowState = FormWindowState.Maximized;
-                di.Show();
+                //di.Show();
+
                 this.Close();
             }
         }
